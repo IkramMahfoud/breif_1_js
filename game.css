@@ -3,7 +3,8 @@
     }
 
     body {
-      background-color: #c0c86d;
+      cursor: url('cursor.png')16 16, auto;
+      background-color: #9edcecad;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -44,6 +45,9 @@
       right: 30px;
     }
 
+    .mole:hover {
+      cursor: url("./cursor-worm.png"), auto;
+    }
 
 
     .gone {
@@ -75,4 +79,8 @@
 
     .show {
       display: block;
+    }
+
+    .custom-cursor {
+
     }
