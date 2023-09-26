@@ -24,12 +24,12 @@ setInterval(function () {
   hole.querySelector(".mole").addEventListener("click", function () {
     statusMole = "happy"
     hole.innerHTML = happyMole;
+    bigger();
   } )
 
 
-
   setTimeout(function () {
-    if (statusMole == "hungry") { hole.innerHTML = sadMole};
+    if (statusMole == "hungry"){ hole.innerHTML = sadMole};
   }, 1400);
 
   setTimeout(function () {
@@ -39,8 +39,23 @@ setInterval(function () {
     hole.querySelector(".mole").remove();
   }, 2600)
 
-
+  
 }, 3000);
+
+
+function bigger(){
+  const dooda = document.getElementById('worm');
+  const clipPathValue = getComputedStyle(dooda).clipPath;
+  const newRightValue = Math.max(parseFloat(clipPathValue.split(' ')[3]) - 5, 0);
+  dooda.style.clipPath = `inset(0 0 0 ${newRightValue}%)`;
+
+  console.log(clipPathValue);
+}
+
+
+
+
+
 
 
 // function click(mole)
